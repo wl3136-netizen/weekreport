@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>로그인 · 주간업무 관리</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.__page = 'login';</script>
+<script src="assets/guard.js"></script>
+</head>
+<body>
+<div class="auth-wrap">
+  <aside class="auth-art">
+    <div>
+      <div class="brand"><span class="brand-mark">주</span> 주간업무 관리</div>
+      <h1>수요일마다,<br><em>한 장으로 정리되는</em><br>우리 팀의 한 주.</h1>
+      <p>프로젝트별로 여러 담당자가 각자 진행사항을 올리면, 관리자 화면에서 자동으로 취합됩니다.</p>
+      <div class="spine">
+        <div class="spine-label">Weekly cadence</div>
+        <div class="spine-rail" id="spineRail"></div>
+      </div>
+    </div>
+    <div class="auth-foot">데이터는 이 브라우저에 저장됩니다 · 비밀번호는 SHA-256으로 해시 처리</div>
+  </aside>
+
+  <main class="auth-panel">
+    <div class="auth-card">
+      <h2>로그인</h2>
+      <p class="sub">사번과 비밀번호를 입력하세요.</p>
+      <div class="alert" id="loginAlert"></div>
+      <div class="field">
+        <label for="li_emp">사번</label>
+        <input id="li_emp" autocomplete="username" placeholder="예: 20240115">
+      </div>
+      <div class="field">
+        <label for="li_pw">비밀번호</label>
+        <input id="li_pw" type="password" autocomplete="current-password" placeholder="비밀번호">
+      </div>
+      <button class="btn btn-primary btn-block" id="btnLogin">로그인</button>
+      <div class="switch-line">계정이 없으신가요? <a href="signup.html"><b>가입하기</b></a></div>
+    </div>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/core.js"></script>
+<script src="assets/login.js"></script>
+</body>
+</html>

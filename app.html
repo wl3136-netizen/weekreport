@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>주간업무 관리</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>window.__page = 'app';</script>
+<script src="assets/guard.js"></script>
+</head>
+<body>
+<div class="app on" id="appView">
+  <aside class="side">
+    <div class="side-user">
+      <div class="nm"><span class="brand-mark" style="width:22px;height:22px;font-size:11px">주</span><span id="sbName"></span></div>
+      <div class="meta" id="sbMeta"></div>
+    </div>
+    <nav id="navBox"></nav>
+    <div class="side-foot">
+      <button class="nav-item" id="btnLogout"><span class="ic">↩</span> 로그아웃</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="page-title" id="pgTitle"></div>
+        <div class="page-desc" id="pgDesc"></div>
+      </div>
+      <div class="btn-row no-print" id="pgActions"></div>
+    </div>
+    <div class="content" id="pgBody"></div>
+  </main>
+</div>
+
+<div class="mask" id="mask">
+  <div class="modal">
+    <div class="modal-h"><h3 id="mTitle"></h3><button class="x" onclick="closeModal()">×</button></div>
+    <div class="modal-b" id="mBody"></div>
+    <div class="modal-f" id="mFoot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/core.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
